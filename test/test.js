@@ -54,5 +54,8 @@ describe('Test Data', () => {
         expect(outputData).to.have.deep.ordered.members([{"name": "Men", "id": 20, "parent_id": null}])
     })
 
-    
+    it('When primitives, return a blank array', () => {
+        const outputData = testData("Blank Array")
+        expect(outputData).to.be.empty
+    })
 })
