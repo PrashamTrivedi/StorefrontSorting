@@ -48,4 +48,11 @@ describe('Test Data', () => {
             {"name": "Watches", "id": 57, "parent_id": 1},
         ])
     })
+
+    it('When input is not array, it returns the object wrapped in array', () => {
+        const outputData = testData({"name": "Men", "id": 20, "parent_id": null})
+        expect(outputData).to.have.deep.ordered.members([{"name": "Men", "id": 20, "parent_id": null}])
+    })
+
+    
 })

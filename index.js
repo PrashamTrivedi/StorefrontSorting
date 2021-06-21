@@ -8,6 +8,8 @@ module.exports = function sortCategoriesForInsert(inputJson) {
         properJsonOutput = properJsonOutput.concat(getChildren(roots, inputJson))
 
 
+    } else {
+        properJsonOutput.push(inputJson)
     }
     return properJsonOutput
 }
